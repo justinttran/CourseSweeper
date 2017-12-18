@@ -42,7 +42,7 @@ def send_email(emailee, courseNum):
     msg['To'] = toAddr
     msg['Subject'] = "Course " + courseNum + " is open!"
 
-    body = "Your course is open!"
+    body = "Your course is open! (This is a temporary message for the MVP.  Eventually the email won't be this sketchy)"
     msg.attach(MIMEText(body, 'plain'))
 
     server = smtplib.SMTP('smtp.gmail.com', 587)
