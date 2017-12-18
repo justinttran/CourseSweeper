@@ -1,4 +1,4 @@
-#Course Sweeper
+# Course Sweeper
 
 Inspired by Course Sniper at Rutgers University.
 
