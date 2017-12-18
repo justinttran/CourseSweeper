@@ -1,0 +1,74 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Cornell Course Sweeper</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+  <script src="../static/js/scripts.js"></script>
+  <link rel="stylesheet" href="../static/css/stylesheet.css"></script>
+</head>
+
+<body>
+  <div class="container">
+    <center>
+      <br>
+      <h1>Cornell Course Sweeper</h1>
+
+      <hr>
+      <p>Enter your full course details on the left, OR the course ID on the right.</p>
+      <p>If both fields are filled, the course ID from the right side will be stored, not the data from the left.</p>
+      <p>Note: the course ID for CS 1110, LEC 001 is 10755</p>
+      <div class="row">
+          <div class="col-sm-6">
+            <h3>Enter course details here</h3>
+            <hr>
+            <table>
+              <tr>
+                <th><input type="text" placeholder="Subject (ex. &quot;CS&quot;)" id="subjectInput"></input></th>
+                <th><input type="text" placeholder="Course # (ex. &quot;1110&quot;)" id="coursenumInput"></input></th>
+              </tr>
+              <tr>
+                <th><input type="text" placeholder="SSR (ex. &quot;LEC&quot;)" id="ssrInput"></input></th>
+                <th><input type="text" placeholder="Section (ex. &quot;001&quot;)" id="sectionInput"></input></th>
+              </tr>
+            </table>
+
+          </div>
+          <div class="col-sm-6">
+            <h3>Enter course ID here</h3>
+            <hr>
+            <input type="text" placeholder="ID (ex. 11298)" id="idInput"></input>
+
+          </div>
+      </div>
+      <hr>
+      <input type="email" placeholder="Email" id="emailInput"></input>
+      <br><br>
+      <button type="button" class="btn btn-primary btn-lg" id="notifyButton" onclick="buttonPressed();">Notify me!</button>
+      <br><br>
+
+    </center>
+  </div>
+
+
+
+  <!-- <input id="subject" type="text" placeholder="subject"></input>
+  <br>
+  <input id="coursecode" type="text" placeholder="coursecode"></input>
+  <br>
+  <input id="ssrComponent" type="text" placeholder="ssr component"></input>
+  <br>
+  <input id="sectionNum" type="text" placeholder="sectionNum"></input>
+  <br>
+  <button type="button" onclick="pass_to_get_courseNum();">Check</button> -->
+
+</body>
+</html>
