@@ -2,13 +2,17 @@ function buttonPressed(){
   var officialCourseId = document.getElementById("idInput").value;
   var email = document.getElementById("emailInput").value;
   email = email.replace("@", "%40");
-  console.log(email);
+  if (email == ""){
+    alert("Invalid email.  Please try again.")
+    return;
+  }
   if (officialCourseId == ""){
     officialCourseId = pass_to_get_courseNum();
   }
 
   if (courseid_exists(officialCourseId).length == 0 || email == ""){
-    alert("Invalid course id or email.  Please try again.")
+    alert("Invalid course id or email.  Please try again.");
+    return;
   }
   else{
     store_email_with_coursenum(email, officialCourseId);
@@ -20,6 +24,7 @@ function buttonPressed(){
     document.getElementById("emailInput").value = "";
 
     alert("Successfully submitted!");
+    return;
   }
 }
 
