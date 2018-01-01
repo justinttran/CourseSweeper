@@ -17,7 +17,7 @@ app = Flask(__name__)
 
 scheduler = Scheduler()
 
-@scheduler.interval_schedule(hours=0.25)
+@scheduler.interval_schedule(hours=0.33)
 def some_job():
     with app.app_context():
         with app.test_request_context():
