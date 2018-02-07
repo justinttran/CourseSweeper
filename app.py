@@ -17,21 +17,22 @@ app = Flask(__name__)
 
 scheduler = Scheduler()
 
-@scheduler.interval_schedule(hours=0.33)
-def some_job():
-    with app.app_context():
-        with app.test_request_context():
-            emails_and_codes = get_emails_and_codes()
-            for userRow in emails_and_codes:
-                subject = get_subject_from_courseid(userRow["coursenum"])
-
-                subjectpage = get_web_page_from_subjectcode(subject)
-                state = open_status_from_coursenum(userRow["coursenum"], subjectpage)
-
-                if (state == "Open"):
-                    send_email(userRow["email"], userRow["coursenum"])
-                    remove_email_and_id(userRow["email"], userRow["coursenum"])
-                    print('Email sent to ' + userRow["email"] + " about " + userRow["coursenum"])
+#DEACTIVATED WHILE ADD-DROP NOT IN SESSION
+# @scheduler.interval_schedule(hours=0.33)
+# def some_job():
+#     with app.app_context():
+#         with app.test_request_context():
+#             emails_and_codes = get_emails_and_codes()
+#             for userRow in emails_and_codes:
+#                 subject = get_subject_from_courseid(userRow["coursenum"])
+#
+#                 subjectpage = get_web_page_from_subjectcode(subject)
+#                 state = open_status_from_coursenum(userRow["coursenum"], subjectpage)
+#
+#                 if (state == "Open"):
+#                     send_email(userRow["email"], userRow["coursenum"])
+#                     remove_email_and_id(userRow["email"], userRow["coursenum"])
+#                     print('Email sent to ' + userRow["email"] + " about " + userRow["coursenum"])
 
 
 def send_email(emailee, courseNum):
