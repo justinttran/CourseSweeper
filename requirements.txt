@@ -40,7 +40,7 @@ PyYAML==3.12
 rauth==0.7.3
 requests==2.18.4
 requests-oauthlib==0.8.0
-rsa==3.4.2
+rsa==4.7.1
 semantic-version==2.5.0
 simplejson==3.13.2
 simplekv==0.10.0
